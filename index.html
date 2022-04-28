@@ -47,7 +47,7 @@
 
         <main class="container">
             <div class="accordion mx-md-5 my-5 rounded-0" id="accordionExample">
-                <!--Edades de pasajeros-->
+               <!--Edades de pasajeros-->
                 <div class="accordion-item rounded-0">
                     <h2 class="accordion-header bg-dark" id="headingOne">
                         <button class="accordion-button rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Edades</button>
@@ -55,7 +55,7 @@
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-black-50">
                             <p>La edad promedio de quienes viajaban en el titanic era de <span id="edad_promedio"></span></p>
-                               <canvas id="edadista" width="100" height="100" class="m-5"></canvas>
+                            <canvas id="edadista" width="100" height="100" class="m-5"></canvas>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                     }
                 });
 
-                //veamos las edades en la consola
+                 //veamos las edades en la consola
                 console.log(edades);
                 //saquemos los null de las edades
                 var edadesreales = edades.filter((e) => {
@@ -184,12 +184,12 @@
                 //veamos las edadesreales en la consola
                 console.log(edadesreales);
                 //ahora saquemos un promedio de las edadesreales
+
+                console.log("eran " + cuantosTercera + " en tercera clase");
+
                 var promedio = edadesreales.reduce((a, b) => a + b, 0) / edadesreales.length;
-
-                console.log("eran" + cuantosTercera + "en tercera clase");
-
                 //y completemos un par de frase
-                document.querySelector("#edad_promedio").innerHTML = Math.round(promedio) + " años.";
+                document.querySelector("#edad_promedio").innerHTML = promedio + " años.";
                 document.querySelector("#total_mujeres").innerHTML = mujeres;
                 document.querySelector("#total_hombres").innerHTML = hombres;
 
