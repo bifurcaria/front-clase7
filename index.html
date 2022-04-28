@@ -55,7 +55,7 @@
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-black-50">
                             <p>La edad promedio de quienes viajaban en el titanic era de <span id="edad_promedio"></span></p>
-                              <canvas id="edadista" width="100" height="100" class="m-5"></canvas>
+                               <canvas id="edadista" width="100" height="100" class="m-5"></canvas>
                         </div>
                     </div>
                 </div>
@@ -198,26 +198,28 @@
                 document.querySelector("#detercera").innerHTML = cuantosTercera;
 
                 //variables
-                var menores = [];
+                   var menores = [];
                 var medianos = [];
-                var maduros= [];
+                var maduros = [];
                 var mayores = [];
-                edadesreales.forEach(e => {
-                  if(e<18) {
-                    menores.push(e);
-                  } else if (e>17 && e<41) {
-                    medianos.push(e);
-                  } else if (e>41 && e<60) {
-                    maduros.push(e);
-                  } else {
-                    mayores.push(e);
-                  }
+
+                edadesreales.forEach((e) => {
+                    if (e < 18) {
+                        menores.push(e);
+                    } else if (e > 17 && e < 41) {
+                        medianos.push(e);
+                    } else if (e > 40 && e < 60) {
+                        maduros.push(e);
+                    } else {
+                        mayores.push(e);
+                    }
                 });
-//no entendi por que uno es con 19 y otra con 18, o sea si entendí pero se ve feo
-                console.log(menores);
-                console.log(medianos);
-                console.log(maduros;)
-                console.log(mayores);
+
+                console.log(menores.length);
+                console.log(medianos.length);
+                console.log(maduros.length);
+                console.log(mayores.length);
+
 
                 new Chart(document.getElementById("clasista").getcontext("2d"), {
                     type: "pie",
@@ -229,7 +231,7 @@
                     },
                 });
 
-                //cambiarle todo x secsista
+                //sexista
 
                 new Chart(document.getElementById("sexista").getcontext("2d"), {
                     type: "pie",
