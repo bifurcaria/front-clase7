@@ -240,10 +240,10 @@
                 //cambiarle todo por edadista
 
                 new Chart(document.getElementById("edadista").getcontext("2d"), {
-                    type: "pie",
+                    type: "doughnut",
                     data: {
                         labels: ["Menores de edad", "Adultos Jóvenes", "Adultos", "Adultos Mayores"],
-                        datasets: [{ data: [menores, medianos, maduros, mayores], label: "Edades en el Titanic", backgroundColor: ["#ff0", "#f00", "#0f0", "#f0f"] }],
+                        datasets: [{ data: [menores.length, medianos.length, maduros.length, mayores.length], label: "Edades en el Titanic", backgroundColor: ["#ff0", "#f00", "#0f0", "#f0f"] }],
                     },
                 });
 
