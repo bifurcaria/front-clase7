@@ -47,7 +47,7 @@
 
         <main class="container">
             <div class="accordion mx-md-5 my-5 rounded-0" id="accordionExample">
-               <!--Edades de pasajeros-->
+                <!--Edades de pasajeros-->
                 <div class="accordion-item rounded-0">
                     <h2 class="accordion-header bg-dark" id="headingOne">
                         <button class="accordion-button rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Edades</button>
@@ -175,7 +175,7 @@
                     }
                 });
 
-                 //veamos las edades en la consola
+                //veamos las edades en la consola
                 console.log(edades);
                 //saquemos los null de las edades
                 var edadesreales = edades.filter((e) => {
@@ -198,7 +198,7 @@
                 document.querySelector("#detercera").innerHTML = cuantosTercera;
 
                 //variables
-                   var menores = [];
+                var menores = [];
                 var medianos = [];
                 var maduros = [];
                 var mayores = [];
@@ -220,14 +220,11 @@
                 console.log(maduros.length);
                 console.log(mayores.length);
 
-
                 new Chart(document.getElementById("clasista").getcontext("2d"), {
                     type: "pie",
                     data: {
                         labels: ["Primera clase", "Segunda Clase", "Tercera Clase"],
-                        datasets: [{ data: [cuantosPrimera, cuantosSegunda, cuantosTercera],
-                        label: "Clases en el Titanic",
-                        backgroundColor: ["#ff0", "#f00", "#0f0"]}],
+                        datasets: [{ data: [cuantosPrimera, cuantosSegunda, cuantosTercera], label: "Clases en el Titanic", backgroundColor: ["#ff0", "#f00", "#0f0"] }],
                     },
                 });
 
@@ -237,22 +234,18 @@
                     type: "pie",
                     data: {
                         labels: ["Hombres", "Mujeres"],
-                        datasets: [{ data: [hombres, mujeres],
-                        label: "Sexo de los pasajeros",
-                        backgroundColor: ["#ff0", "#f00"]}],
+                        datasets: [{ data: [hombres, mujeres], label: "Sexo de los pasajeros", backgroundColor: ["#ff0", "#f00"] }],
                     },
-                })
+                });
                 //cambiarle todo por edadista
 
                 new Chart(document.getElementById("edadista").getcontext("2d"), {
                     type: "pie",
                     data: {
                         labels: ["Menores de edad", "Adultos Jóvenes", "Adultos", "Adultos Mayores"],
-                        datasets: [{ data: [menores, medianos, maduros, mayores],
-                        label: "Edades en el Titanic",
-                        backgroundColor: ["#ff0", "#f00", "#0f0", "#f0f"]}],
+                        datasets: [{ data: [menores, medianos, maduros, mayores], label: "Edades en el Titanic", backgroundColor: ["#ff0", "#f00", "#0f0", "#f0f"] }],
                     },
-                })
+                });
 
                 /*
                                 Los demás datos deben ser propustos por ustedes.
